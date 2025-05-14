@@ -5,7 +5,7 @@ import { FaCheck } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { AppContext } from "../context/context";
 
-const pop = () => {
+const Pop = () => {
   const { status, setpopshow } = useContext(AppContext);
   return (
     <>
@@ -30,4 +30,4 @@ const pop = () => {
   );
 };
 
-export default pop;
+export default Pop;

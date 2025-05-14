@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom'
 
 import { AppContext } from '../context/context'
 import { RxCross1 } from "react-icons/rx";
-import Pop from './pop';
+import Pop from './Pop';
 
 
 
