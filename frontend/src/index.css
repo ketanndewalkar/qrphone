@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+html,body{
+  box-sizing: border-box;
+  width:100vw;
+  height:fit-content;
+  overflow-x: hidden;
+}
