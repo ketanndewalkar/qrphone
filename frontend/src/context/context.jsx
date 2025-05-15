@@ -6,7 +6,7 @@ export const AppContext = createContext();
 
 const Context = ({children}) => {
   const [popshow, setpopshow] = useState(false)
-  const [status, setstatus] = useState("success")
+  const [status, setstatus] = useState(200)
   return (
     <>
     <AppContext.Provider value={{popshow, setpopshow ,status , setstatus}}>

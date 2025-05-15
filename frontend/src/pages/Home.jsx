@@ -53,9 +53,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-full h-fit  border-black z-9 relative pt-25">
+    <div className="w-full h-fit  border-black z-9 relative pt-40">
       <div className=" w-full h-full">
-        <h1 className="w-full h-fit text-[40px] font-bold text-center pt-9 leading-12 ">
+        <h1 className="w-full h-fit text-[40px] font-bold text-center pt-9 leading-12 md:text-[3.5rem] md:mt-8 md:leading-16">
           "Where the Streets Meet the Screen
           <br />
           <b className="bg-gradient-to-r from-red-500 to-gray-500 bg-clip-text text-transparent font-semibold">
@@ -71,8 +71,8 @@ const Home = () => {
           </b>
           "
         </h1>
-        <div className="w-full pt-10 flex  border-black h-fit gap-2 justify-between px-15">
-          <p className="text-[20px] tracking-widest leading-9 text-[rgba(111, 111, 111, 1)] text-2xl mt-30 ml-5 h-fit  w-140 shrink-0">
+        <div className="w-full pt-10 flex h-fit gap-2 justify-between px-15 md:flex-col">
+          <p className="text-[20px] tracking-widest leading-9 text-[rgba(111, 111, 111, 1)] text-2xl mt-30 ml-5 h-fit  w-140 shrink-0 md:w-full md:mt-5 md:text-[2rem] md:text-[#7e7e7e] md:tracking-wider ">
             QRWalk is a smart street-level advertising platform that turns
             physical banners into interactive experiences.We place branded
             banners with QR codes in high-traffic locations.When people walk by,
@@ -80,19 +80,22 @@ const Home = () => {
             website, product, or offer.
           </p>
           <div className="h-120  flex items-center justify-end w-50vw md:w-20vw relative">
-            <img src={Landinglogo} className="h-full align-right" />
             <img
+              src={Landinglogo}
+              className="h-full align-right w-auto md:w-full md:h-auto md:mt-30"
+            />
+            {/* <img
               src={Char}
               className="absolute bottom-0 right-[70%] scale-170 mb-4"
             />
-            <img src={Qr} className="h-[20%] absolute bottom-70 right-[90%]" />
+            <img src={Qr} className="h-[20%] absolute bottom-70 right-[90%]" /> */}
           </div>
         </div>
-        <h1 className="w-full font-bold text-red-500 mt-40 text-center text-4xl">
+        <h1 className="w-full font-bold text-red-500 mt-40 text-center text-4xl md:text-[4rem] md:mt-60">
           20+ Brands Join
         </h1>
         <div
-          className="w-full h-50 flex items-center mt-10 gap-20 px-3"
+          className="w-full h-50 flex justify-center items-center mt-10 gap-20 px-3 md:h-40 md:gap-6 md:overflow-y-scroll md:py-2"
           ref={move}
         >
           <img src={Eatzze} className="h-[94%] scale-90" />
@@ -101,15 +104,21 @@ const Home = () => {
           <img src={Meesho} className="h-[94%] scale-90" />
           <img src={Mikava} className="h-[94%] scale-90" />
           <img src={Car} className="h-[94%] scale-90 bg-transparent" />
+          <img src={Eatzze} className="h-[94%] scale-90" />
+          <img src={Eatclub} className="h-[94%] scale-90" />
+          <img src={Internzze} className="h-[94%] scale-90" />
+          <img src={Meesho} className="h-[94%] scale-90" />
+          <img src={Mikava} className="h-[94%] scale-90" />
+          <img src={Car} className="h-[94%] scale-90 bg-transparent" />
+          <img src={Eatzze} className="h-[94%] scale-90" />
+          <img src={Eatclub} className="h-[94%] scale-90" />
+          <img src={Internzze} className="h-[94%] scale-90" />
+          <img src={Meesho} className="h-[94%] scale-90" />
+          <img src={Mikava} className="h-[94%] scale-90" />
+          <img src={Car} className="h-[94%] scale-90 bg-transparent" />
         </div>
-        <div className="w-screen h-screen flex justify-center items-center mt-20 drop-shadow-[0_6px_6px_rgba(0,0,0,0.15)]" >
-          <img src={Landinglogo3} className="h-screen w-full"/>
-        </div>
+
         <div className="w-screen h-fit border-2 mt-30 relative bg-[#303030] overlfow-hidden">
-          <img
-            src={Landinglogo1}
-            className="absolute right-0 bottom-0 h-120 z-7"
-          />
           <div
             className="w-full h-full absolute top-0 left-[60%]"
             style={{
@@ -117,14 +126,15 @@ const Home = () => {
               zIndex: 6,
             }}
           ></div>
+
           <div className="w-full h-190 relative bg-transparent z-7 px-1">
-            <h1 className="text-white text-3xl font-bold w-full text-center mt-15">
+            <h1 className="text-white text-3xl font-bold w-full text-center mt-15 md:text-[3.5rem]">
               Why QRWalk Works?
             </h1>
             <div className="bg-transparent min-h-screen p-10 mt-30">
-              <div className="grid grid-cols-3 grid-rows-3 gap-5 w-200">
-                {/* Cost-Effective */}
-                <div className="bg-[#3a3a3a] rounded-lg p-4 col-span-1 row-span-1">
+              <div className="flex flex-wrap gap-5 w-[50rem]">
+                {/* Step 1 */}
+                <div className="bg-[#3a3a3a] rounded-lg p-4 basis-[30%] grow">
                   <h3 className="text-orange-400 text-xl font-bold mb-2">
                     Step 1: Place QR Codes
                   </h3>
@@ -135,8 +145,8 @@ const Home = () => {
                   </p>
                 </div>
 
-                {/* High Visibility */}
-                <div className="bg-[#3a3a3a] rounded-lg p-4 col-span-1 row-span-2">
+                {/* Step 3 */}
+                <div className="bg-[#3a3a3a] rounded-lg p-4 basis-[63%] grow">
                   <h3 className="text-orange-400 text-xl font-bold mb-2">
                     Step 3: Show Engaging Content
                   </h3>
@@ -154,19 +164,19 @@ const Home = () => {
                   </p>
                 </div>
 
-                {/* Real-Time Analytics */}
-                <div className="bg-[#3a3a3a] rounded-lg p-4 col-span-1 row-span-1">
+                {/* Step 4 */}
+                <div className="bg-[#3a3a3a] rounded-lg p-4 basis-[30%] grow">
                   <h3 className="text-orange-400 text-xl font-bold mb-2">
                     Step 4: Learn & Enjoy
-
                   </h3>
                   <p className="text-white text-sm tracking-widest">
-                    Visitors explore while learning, playing, or discovering new things making every walk more fun and meaningful.
+                    Visitors explore while learning, playing, or discovering new
+                    things making every walk more fun and meaningful.
                   </p>
                 </div>
 
-                {/* CAC */}
-                <div className="bg-[#3a3a3a] rounded-lg p-4 col-span-1 row-span-1">
+                {/* Step 2 */}
+                <div className="bg-[#3a3a3a] rounded-lg p-4 basis-[30%] grow">
                   <h3 className="text-orange-400 text-xl font-bold mb-2">
                     Step 2: Scan with a Phone
                   </h3>
@@ -176,56 +186,65 @@ const Home = () => {
                   </p>
                 </div>
 
-                {/* Multi-brand Banners */}
-                <div className="bg-[#3a3a3a] rounded-lg p-4 col-span-1 row-span-1">
+                {/* Share & Come Back */}
+                <div className="bg-[#3a3a3a] rounded-lg p-4 basis-[30%] grow">
                   <h3 className="text-orange-400 text-xl font-bold mb-2">
                     Share & Come Back
                   </h3>
                   <p className="text-white text-sm tracking-widest">
-                    Visitors can share their experience on social media or with friends and revisit the trail for new content, seasonal updates, or special events.
+                    Visitors can share their experience on social media or with
+                    friends and revisit the trail for new content, seasonal
+                    updates, or special events.
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          <img
+            src={Landinglogo1}
+            className="absolute md:relative right-0 bottom-0 h-120 z-7 md:w-full md:h-auto"
+          />
         </div>
-        <h1 className="w-full font-bold text-red-500 mt-40 text-center text-4xl">
+        <h1 className="w-full font-bold text-red-500 mt-40 text-center text-4xl md:text-[3.5rem]">
           Ideal For
         </h1>
-        <div className=" w-full h-80 mt-16 flex items-center justify-center gap-18 px-3">
-          <div className="w-70 border-2 h-full border-gray-400 flex items-center justify-center flex-col px-2 gap-6 bg-white rounded-2xl shadow-xl p-6 max-w-md m-4 transition-transform hover:shadow-2xl hover:-translate-y-1">
-            <img src={Pc} className="" />
-            <h1 className="font-bold text-3xl w-full text-center">
-              App Based Startup
-            </h1>
-          </div>
-          <div className="w-70 border-2 h-full border-gray-400 flex items-center justify-center flex-col px-2 gap-6 bg-white rounded-2xl shadow-xl p-6 max-w-md m-4 transition-transform hover:shadow-2xl hover:-translate-y-1">
-            <img src={Ecomerce} className="" />
-            <h1 className="font-bold text-3xl w-full text-center">
-              E-commerce platforms
-            </h1>
-          </div>
-          <div className="w-70 border-2 h-full border-gray-400 flex items-center justify-center flex-col px-2 gap-6 bg-white rounded-2xl shadow-xl p-6 max-w-md m-4 transition-transform hover:shadow-2xl hover:-translate-y-1">
-            <img src={Delivery} className="" />
-            <h1 className="font-bold text-3xl w-full text-center">
-              Food delivery & D2C brands
-            </h1>
-          </div>
-          <div className="w-70 border-2 h-full border-gray-400 flex items-center justify-center flex-col px-2 gap-6 bg-white rounded-2xl shadow-xl p-6 max-w-md m-4 transition-transform hover:shadow-2xl hover:-translate-y-1">
-            <img src={Chat} className="" />
-            <h1 className="font-bold text-3xl w-full text-center">
+        <div className=" w-full h-80 mt-16 flex items-center justify-center gap-18 px-3 md:flex-col md:h-fit">
+          <div className="w-70 md:w-[100vw] border-2 h-full md:h-[50vw] border-gray-400 flex items-center justify-center flex-col px-2 gap-6 bg-white rounded-2xl shadow-xl p-6 max-w-md m-4 transition-transform hover:shadow-2xl hover:-translate-y-1 md:max-w-none">
+            <img src={Chat} className=" h-[30vw]" />
+            <h1 className="font-bold text-3xl w-full text-center  md:text-[3rem]">
               Local-to-digital businesses
             </h1>
           </div>
+          <div className="w-70 md:w-[100vw] border-2 h-full md:h-[50vw] border-gray-400 flex items-center justify-center flex-col px-2 gap-6 bg-white rounded-2xl shadow-xl p-6 max-w-md m-4 transition-transform hover:shadow-2xl hover:-translate-y-1 md:max-w-none">
+            <img src={Pc} className=" h-[30vw]" />
+            <h1 className="font-bold text-3xl w-full text-center  md:text-[3rem]">
+              App Based Startup
+            </h1>
+          </div>
+          <div className="w-70 md:w-[100vw] border-2 h-full md:h-[50vw] border-gray-400 flex items-center justify-center flex-col px-2 gap-6 bg-white rounded-2xl shadow-xl p-6 max-w-md m-4 transition-transform hover:shadow-2xl hover:-translate-y-1 md:max-w-none">
+            <img src={Delivery} className=" h-[30vw]" />
+            <h1 className="font-bold text-3xl w-full text-center  md:text-[3rem]">
+              Food delivery & D2C brands
+            </h1>
+          </div>
+          <div className="w-70 md:w-[100vw] border-2 h-full md:h-[50vw] border-gray-400 flex items-center justify-center flex-col px-2 gap-6 bg-white rounded-2xl shadow-xl p-6 max-w-md m-4 transition-transform hover:shadow-2xl hover:-translate-y-1 md:max-w-none">
+            <img src={Ecomerce} className=" h-[30vw]" />
+            <h1 className="font-bold text-3xl w-full text-center md:text-[3rem]">
+              E-commerce platforms
+            </h1>
+          </div>
         </div>
-        <div className="w-screen h-screen flex justify-center items-center mt-20" >
-          <img src={Landinglogo4} className="h-screen"/>
+        <h1 className="w-full font-bold text-red-500 mt-40 text-center text-4xl md:text-[3.5rem] md:mt-20">
+          Launching Citys
+        </h1>
+        <div className="w-screen h-screen flex justify-center items-center mt-20 md:mt-8 md:w-full md:h-fit">
+          <img src={Landinglogo4} className="h-screen md:w-full md:h-auto" />
         </div>
-        <h1 className="w-full font-bold text-red-500 mt-40 text-center text-4xl">
+        <h1 className="w-full font-bold text-red-500 mt-40 text-center text-4xl md:text-[3.3rem] md:mt-20 ">
           Want Your Brand on the Next QRwalk?
         </h1>
-        <div className="w-full px-30 h-fit flex pt-20 justify-between items-centers">
-          <p className="w-150 text-[1.2rem] tracking-wide mt-3">
+        <div className="w-full px-30 h-fit flex pt-20 justify-between items-centers md:flex-col md:px-10 ">
+          <p className="w-150 text-[1.2rem] tracking-wide mt-3 md:w-full md:text-[2rem]">
             Imagine your app or website being discovered not just online but
             right on the streets. With QRWalk, you get the power of physical
             visibility paired with instant digital engagement. Whether you're a
@@ -233,15 +252,16 @@ const Home = () => {
             eyes, QRWalk brings you closer to real users in real time.
             <br />
             <br />
-            <Link
-              to="/contact-page"
-              className="px-6 py-3 border-2 rounded-lg text-red-500 border-red-500 font-semibold hover:cursor-pointer"
-              
-            >
-              Contact with Us
-            </Link>
+            <div className="md:w-full md:flex md:justify-center md:items-center">
+              <Link
+                to="/contact-page"
+                className="px-6 py-3 border-2 rounded-lg text-red-500 border-red-500 font-semibold hover:cursor-pointer md:px-20 md:py-5 md:text-[3rem] md:w-full md:text-center md:text-white md:bg-red-500"
+              >
+                Contact with Us
+              </Link>
+            </div>
           </p>
-          <img src={Last} className="w-120 aspect-[16/9]" />
+          <img src={Last} className="w-120 aspect-[16/9] md:w-full md:h-auto md:mt-20" />
         </div>
       </div>
     </div>
